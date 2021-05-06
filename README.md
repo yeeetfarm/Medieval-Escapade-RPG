@@ -20,3 +20,7 @@ We picked Strategy as one of our major design patterns as the text-based RPG wil
 
 ###### Design Pattern 2: State
 State pattern also seems like it would be useful for the project, if applied to the character classes of the user’s character. An example of state pattern use could be something like  if the character’s health gets lowered, then the class can change its behavior such as allowing the character to do more or less damage or open up new ability options for the user. Another example would be if the user gets attacked by the slime enemy their speed is reduced for the next turn. Some problems that we might encounter would be the organization of abilities of the user character and when they would be activated. A state design pattern could be used to neatly organize when the program would have to operate differently under different circumstances. 
+
+###### OMT Class Diagram
+![OMT Diagram](https://user-images.githubusercontent.com/81598801/117375515-fe941b00-ae83-11eb-974d-bb45a820891c.jpeg)
+
