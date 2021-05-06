@@ -23,4 +23,6 @@ State pattern also seems like it would be useful for the project, if applied to 
 
 ###### OMT Class Diagram
 ![OMT Diagram](https://user-images.githubusercontent.com/81598801/117375515-fe941b00-ae83-11eb-974d-bb45a820891c.jpeg)
+###### OMT Description
+The OMT diagram depicts the strategy pattern of our project through the character class being split up into many different character choices as well as enemy types that all define their own attack function which is abstract in the base class. The user gets to decide between the four character choices, and once they do the program will use that character type throughout their adventure. Throughout the adventure, the player will be presented with different options at runtime: attack, heal via potion, or concede. These options are presented in different functions for the Character class. 
 
