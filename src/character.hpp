@@ -7,60 +7,44 @@
 
 using namespace std;
 
-class Character : public attackStrat{
+class AttackStrat;
+
+class Character{
 protected:
     int health;
     int armor;
     int damage;
     int speed;
+    AttackStrat* attack_ = nullptr;
 
 public:
     Character(int health_, int armor_, int damage_, int speed_):health(health_), armor(armor_), damage(damage_), speed(speed_){}
 
-    int getHealth() const{
-        return health;
-    }
+    void setAttack(AttackStrat* attack);
 
-    int getArmor() const{
-        return armor;
-    }
+    int getHealth() const;
 
-    int getDamage() const{
-        return damage;
-    }
+    int getArmor() const;
 
-    int getSpeed() const{
-        return speed;
-    }
+    int getDamage() const;
 
-    void expadd(int add){
+    int getSpeed() const;
 
-    }
+    void attackHit(Character* person);
 
-    void damageHits(int damage_){
+    void expadd(int add);
 
-    }
+    void damageHits(int damage_);
 
-    void setHealth(int health_){
-        this->health = health_;
-    }
+    void setHealth(int health_);
 
-    void setArmor(int armor_){
-        this->armor = armor_;
-    }
+    void setArmor(int armor_);
 
-    bool isAlive() const{
-        
-    }
+    bool isAlive() const;
 
-    void seeInventory(){
-        
-    }
+    void seeInventory();
 
-    void usePotion(){
-        
-    }
-
+    void usePotion();
 
 };
 #endif //__CHARACTER_HPP__

@@ -2,46 +2,42 @@
 #define __ATTACK_HPP__
 
 #include <iostream>
+#include "character.hpp"
 
 using namespace std;
 
-class attackStrat{
+class Character;
+
+class AttackStrat{
 public:
-    virtual double attack() = 0;
+    virtual void attack(Character* character_, Character* enemy) = 0;
 };
 
-//FIXME Finish all of the attacks
-
-class attackWarrior : public attackStrat{
+class AttackWarrior : public AttackStrat{
 public:
-    virtual double attack(){
-
-        return 0;
-    }
+    virtual void attack(Character* character_, Character* enemy);
 };
 
-class attackMage : public attackStrat{
+class AttackMage : public AttackStrat{
 public:
-    virtual double attack(){
-
-        return 0;
-    }
+    virtual void attack(Character* character_, Character* enemy);
 };
 
-class attackAssassin : public attackStrat{
+class AttackAssassin : public AttackStrat{
 public:
-    virtual double attack(){
-
-        return 0;
-    }
+    virtual void attack(Character* character_, Character* enemy);
 };
 
-class attackArcher : public attackStrat{
+class AttackArcher : public AttackStrat{
 public:
-    virtual double attack(){
+    virtual void attack(Character* character_, Character* enemy);
+};
 
-        return 0;
-    }
+class AttackEnemy : public AttackStrat{
+public:
+    virtual void attack(Character* character_, Character* enemy);
 };
 
 #endif //__ATTACK_HPP__
+
+
