@@ -1,3 +1,4 @@
+
 # Text Based RPG
  Authors: [Stanton Zeng](https://github.com/Lionblaze218), [Jacob Yee](https://github.com/yeetfarm), [Cruz Ramirez](https://github.com/Qrooz)
  
@@ -27,3 +28,4 @@ Since our game revolves around different playable characters that all are under 
 ###### OMT Description
 The OMT diagram depicts the strategy pattern of our project through the character class being split up into many different character choices as well as enemy types that all define their own attack function which is abstract in the base class. The user gets to decide between the four character choices, and once they do the program will use that character type throughout their adventure. Throughout the adventure, the player will be presented with different options at runtime: attack, heal via potion, or concede. These options are presented in different functions for the Character class. 
 
+![Factory OMT](https://user-images.githubusercontent.com/74085680/118554841-d1aef600-b716-11eb-8ecc-d24ff03897b8.jpeg)
