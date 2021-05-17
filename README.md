@@ -22,7 +22,9 @@ We picked Strategy as our major design patterns as the text-based RPG will be ac
 Since our game revolves around different playable characters that all are under the character class. What we can do is use the Abstract Factory design pattern to implements more detailed sub-classes from these said characters to give them special equipment, items, or actions. Similar to the use of the Strategy design pattern, our game has to be flexible enough to handle these somewhat similar but different in their own way functions and algorithms, as we have multiple classes revolving around the character class. This will make the ability to choose your character and be as unique, quite easy and simple for the user. 
 
 ###### OMT Class Diagram
-![OMT Diagram](https://user-images.githubusercontent.com/81598801/117375515-fe941b00-ae83-11eb-974d-bb45a820891c.jpeg)
+![OMT Diagram](https://user-images.githubusercontent.com/81598801/118554612-87c61000-b716-11eb-8f6f-6765d02df622.jpeg)
+
 ###### OMT Description
-The OMT diagram depicts the strategy pattern of our project through the character class being split up into many different character choices as well as enemy types that all define their own attack function which is abstract in the base class. The user gets to decide between the four character choices, and once they do the program will use that character type throughout their adventure. Throughout the adventure, the player will be presented with different options at runtime: attack, heal via potion, or concede. These options are presented in different functions for the Character class. 
+The OMT diagram depicts the strategy pattern of our project through the character class being split up into many different character choices as well as enemy types that all define their own attack function which is abstract in the base class. The![Uploading OMT Diagram.jpeg…]()
+ user gets to decide between the four character choices, and once they do the program will use that character type throughout their adventure. Throughout the adventure, the player will be presented with different options at runtime: attack, heal via potion, or concede. These options are presented in different functions for the Character class. 
 
