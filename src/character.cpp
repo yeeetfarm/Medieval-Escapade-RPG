@@ -1,4 +1,9 @@
 #include "character.hpp"
+#include "warrior.hpp"
+
+Character::~Character(){
+
+}
 
 void Character::setAttack(AttackStrat* attack){
     this->attack_ = attack;
@@ -51,4 +56,8 @@ void Character::seeInventory(){
 
 void Character::usePotion(){
 
+}
+
+bool healthCheck(){
+    return true;
 }
