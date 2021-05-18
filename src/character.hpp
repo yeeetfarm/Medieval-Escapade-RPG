@@ -18,7 +18,10 @@ protected:
     AttackStrat* attack_ = nullptr;
 
 public:
-    Character(int health_, int armor_, int damage_, int speed_):health(health_), armor(armor_), damage(damage_), speed(speed_){}
+    //Character(int health_, int armor_, int damage_, int speed_):health(health_), armor(armor_), damage(damage_), speed(speed_){}
+    
+
+    virtual ~Character();
 
     void setAttack(AttackStrat* attack);
 
@@ -45,6 +48,8 @@ public:
     void seeInventory();
 
     void usePotion();
+
+    virtual bool healthCheck() = 0;
 
 };
 #endif //__CHARACTER_HPP__

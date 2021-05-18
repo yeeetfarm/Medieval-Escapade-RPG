@@ -3,18 +3,19 @@
 
 #include "character.hpp"
 #include "attack.hpp"
+#include "warrior.hpp"
 
 using namespace std;
 
 int main(){
-    Character* warrior = new Character(1, 1, 1, 1);
+    Warrior* temp = new Warrior(1, 1, 1, 1);
     AttackWarrior* aWarrior = new AttackWarrior;
-    warrior->setAttack(aWarrior);
+    temp->setAttack(aWarrior);
 
-    Character* zombie = new Character(10, 10, 0, 0);
+    Warrior* temp2 = new Warrior(1, 1, 1, 1);
 
-    warrior->attackHit(zombie);
+    temp->attackHit(temp2);
 
-    return 0;
+	return 0;
 }
 
