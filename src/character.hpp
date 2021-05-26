@@ -2,6 +2,7 @@
 #define __CHARACTER_HPP__
 
 #include <iostream>
+#include <vector>
 
 #include "attack.hpp"
 
@@ -43,13 +44,95 @@ public:
 
     void setArmor(int armor_);
 
+    void setSpeed(int speed_);
+
     bool isAlive() const;
 
     void seeInventory();
 
     void usePotion();
 
-    virtual bool healthCheck() = 0;
+    virtual void burning();
 
+    virtual int getBurning();
+
+    //Warrior
+    virtual bool healthCheck();
+
+    //Archer
+    virtual void useArrow();
+
+    virtual int getHolder();
+
+    virtual bool isArrow();
+
+    virtual void setHolder(int num);
+
+
+};
+
+class Warrior : public Character{
+private:
+    int startingHealth;
+
+public:
+    Warrior(int health_, int armor_, int damage_, int speed_){
+        this->health = health_;
+        this->armor = armor_;
+        this->damage = damage_;
+        this->speed = speed_;
+        startingHealth = health_;
+    }
+    bool healthCheck(){
+        if(health < startingHealth/2){
+                return true;
+        }
+        return false;
+    }
+};
+
+class Archer : public Character{
+private:
+    vector<int> arrows;
+    int holder;
+    int burn;
+public:
+    Archer(int health_, int armor_, int damage_, int speed_){
+        health = health_;
+        armor = armor_;
+        damage = damage_;
+        speed = speed_;
+        for(int i = 0; i < 3; i++){
+            arrows.push_back(5);
+        }
+        holder = -1;
+        burn = 0;
+    }
+    int getHolder(){
+        return holder;
+    }
+    void useArrow(){
+        if (holder != -1){
+            --arrows[holder];
+        }
+    }
+    bool isArrow(){
+        if (holder == -1){
+            return true;
+        }
+        if (arrows[holder] == 0){
+            return false;
+        }
+        return true;
+    }
+    void setHolder(int num){
+        holder = num;
+    }
+    void burning(){
+        burn += 2;
+    }
+    int getBurning(){
+        return burn;
+    }
 };
 #endif //__CHARACTER_HPP__

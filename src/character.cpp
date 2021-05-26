@@ -1,5 +1,4 @@
 #include "character.hpp"
-#include "warrior.hpp"
 
 Character::~Character(){
 
@@ -45,6 +44,10 @@ void Character::setArmor(int armor_){
     this->armor = armor_;
 }
 
+void Character::setSpeed(int speed_){
+    this->speed = speed_;
+}
+
 bool Character::isAlive() const{
 
     return false;
@@ -58,6 +61,32 @@ void Character::usePotion(){
 
 }
 
-bool healthCheck(){
+void Character::burning(){
+
+}
+
+int Character::getBurning(){
+    return 0;
+}
+
+//Warrior
+bool Character::healthCheck(){
     return true;
+}
+
+
+//Archer
+void Character::useArrow(){
+
+}
+int Character::getHolder(){
+    return 0;
+}
+
+bool Character::isArrow(){
+    return true;
+}
+
+void Character::setHolder(int num){
+
 }
