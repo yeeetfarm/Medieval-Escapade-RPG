@@ -68,7 +68,10 @@ public:
 
     virtual void setHolder(int num);
 
+    //Mage
+    virtual void increasePower();
 
+    virtual int lightBolt();
 };
 
 class Warrior : public Character{
@@ -130,6 +133,26 @@ public:
     }
     void burning(){
         burn += 2;
+    }
+    int getBurning(){
+        return burn;
+    }
+};
+
+class Assassin : public Character{
+private:
+    int burn;
+
+public:
+    Assassin(int health_, int armor_, int damage_, int speed_){
+        health = health_;
+        armor = armor_;
+        damage = damage_;
+        speed = speed_;
+        burn = 0;
+    }
+    void burning(){
+        burn += 5;
     }
     int getBurning(){
         return burn;

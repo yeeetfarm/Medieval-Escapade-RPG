@@ -18,7 +18,12 @@ void AttackMage::attack(Character* character_, Character* enemy){
 }
 
 void AttackAssassin::attack(Character* character_, Character* enemy){
+    if (character_->getBurning() != 0){
+        enemy->setHealth(enemy->getHealth() - character_->getBurning());
+        cout << "Dealt " << character_->getBurning() << " points of poison damage" << endl;
+    }
     enemy->setHealth(enemy->getHealth() - character_->getDamage());
+    character_->burning();
     cout << "Stab!" << endl;
 }
 

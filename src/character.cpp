@@ -90,3 +90,13 @@ bool Character::isArrow(){
 void Character::setHolder(int num){
 
 }
+
+//Mage
+void Character::increasePower(){
+
+}
+
+int Character::lightBolt(){
+    return 0;
+}
+
