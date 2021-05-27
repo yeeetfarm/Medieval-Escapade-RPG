@@ -46,6 +46,8 @@ public:
 
     void setSpeed(int speed_);
 
+    void setDamage(int damage_);
+
     bool isAlive() const;
 
     void seeInventory();
@@ -153,6 +155,43 @@ public:
     }
     void burning(){
         burn += 5;
+    }
+    int getBurning(){
+        return burn;
+    }
+};
+
+class Mage : public Character{
+private:
+    int counter;
+    int holder;
+    int burn;
+
+public:
+    Mage(int health_, int armor_, int damage_, int speed_){
+        health = health_;
+        armor = armor_;
+        damage = damage_;
+        speed = speed_;
+        holder = 0;
+        counter = 0;
+        burn = 0;
+    }
+    void setHolder(int num){
+        holder = num;
+    }
+    int getHolder(){
+        return holder;
+    }
+    void increasePower(){
+        setDamage(damage + 20);
+    }
+
+    int lightBolt(){
+        return damage + (10 * counter++);
+    }
+    void burning(){
+        burn += 1;
     }
     int getBurning(){
         return burn;
