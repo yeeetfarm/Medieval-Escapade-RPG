@@ -91,7 +91,7 @@ public:
         this->speed = speed_;
         startingHealth = health_;
     }
-    ~Warrior(){ delete attack_;}
+    ~Warrior(){}
     bool healthCheck(){
         if(health < startingHealth/2){
                 return true;
@@ -117,6 +117,7 @@ public:
         holder = -1;
         burn = 0;
     }
+    ~Archer(){}
     int getHolder(){
         return holder;
     }
@@ -156,6 +157,7 @@ public:
         speed = speed_;
         burn = 0;
     }
+    ~Assassin(){}
     void burning(){
         burn += 5;
     }
@@ -180,6 +182,7 @@ public:
         counter = 0;
         burn = 0;
     }
+    ~Mage(){}
     void setHolder(int num){
         holder = num;
     }
@@ -199,7 +202,7 @@ public:
     int getBurning(){
         return burn;
     }
-};  
+};
   //ENEMIES
 class Dragon : public Character{
     public:
@@ -209,7 +212,7 @@ class Dragon : public Character{
         	damage = damage_;
         	speed = speed_;
 	}
-
+	~Dragon(){}
 	bool dodgeAttack(){
 		int percentage = rand() % 100 + 1;
 		if(percentage <= 40){
@@ -227,7 +230,7 @@ class Ogre : public Character{
                 	damage = damage_;
                 	speed = speed_;
         	}
-	~Ogre(){delete attack_;}
+		~Ogre(){}
 };
 
 class Slime : public Character{
@@ -238,6 +241,7 @@ class Slime : public Character{
                         damage = damage_;
                         speed = speed_;
                 }
+		~Slime(){}
 		void reduceSpeed(Character* char_){
 			int newSpeed = char_->getSpeed() - 5;
 			char_->setSpeed(newSpeed);
@@ -255,6 +259,7 @@ class Skeleton : public Character{
                         speed = speed_;
 			surviveFatal = 1;
                 }
+		~Skeleton(){}
 		void checkFatal(){
 			if(surviveFatal == 1){
 				health = 1;
@@ -263,7 +268,7 @@ class Skeleton : public Character{
 		}
 };
 
-class Spider : public Character{\
+class Spider : public Character{
 	private:
 		int web_; //1 = web function used, 0 = not in use
 	public:
@@ -274,6 +279,7 @@ class Spider : public Character{\
                         speed = speed_;
 			web_ = 0;
                 }
+		~Spider(){}
 		bool webon(Character *char_){
 			web_ = 1;		
 		}
@@ -290,6 +296,7 @@ class Zombies : public Character{
                         damage = damage_;
                         speed = speed_;
                 }
+		~Zombies(){}
 		void leech(Character *char_){
 			int newHealth = char_->getHealth() - 5;
 			char_->setHealth(newHealth);
