@@ -203,16 +203,22 @@ class Skeleton : public Character{
 		}
 };
 
-class Spider : public Character{
+class Spider : public Character{\
+	private:
+		int web_; //1 = web function used, 0 = not in use
 	public:
 		Spider(int health_, int armor_, int damage_, int speed_){
                         health = health_;
                         armor = armor_;
                         damage = damage_;
                         speed = speed_;
+			web_ = 0;
                 }
-		void web(Character *char_){
-			//char_ cant attack for 1 turn
+		bool webon(Character *char_){
+			web_ = 1;		
+		}
+		bool weboff(Character *char_){
+			web_ = 0;
 		} 	
 };
 
