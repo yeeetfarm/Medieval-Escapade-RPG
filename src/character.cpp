@@ -62,7 +62,12 @@ void Character::seeInventory(){
 }
 
 void Character::usePotion(){
+	potion -= 1;
+	this->health += 30;
+}
 
+void Character::addPotion(){
+	potion += 1;
 }
 
 void Character::burning(){

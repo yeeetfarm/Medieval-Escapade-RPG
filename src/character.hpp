@@ -17,6 +17,7 @@ protected:
     int damage;
     int speed;
     AttackStrat* attack_ = nullptr;
+    int potion;
 
 public:
     //Character(int health_, int armor_, int damage_, int speed_):health(health_), armor(armor_), damage(damage_), speed(speed_){}
@@ -54,6 +55,8 @@ public:
 
     void usePotion();
 
+    void addPotion();
+
     virtual void burning();
 
     virtual int getBurning();
@@ -90,6 +93,7 @@ public:
         this->damage = damage_;
         this->speed = speed_;
         startingHealth = health_;
+	this->potion = 2;
     }
     ~Warrior(){}
     bool healthCheck(){
@@ -116,6 +120,7 @@ public:
         }
         holder = -1;
         burn = 0;
+	potion = 2;
     }
     ~Archer(){}
     int getHolder(){
@@ -156,6 +161,7 @@ public:
         damage = damage_;
         speed = speed_;
         burn = 0;
+	potion = 2;
     }
     ~Assassin(){}
     void burning(){
@@ -181,6 +187,7 @@ public:
         holder = 0;
         counter = 0;
         burn = 0;
+	potion = 2;
     }
     ~Mage(){}
     void setHolder(int num){
