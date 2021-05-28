@@ -23,7 +23,7 @@ We picked Strategy as our major design patterns as the text-based RPG will be ac
 Since our game revolves around different playable characters that all are under the character class. What we can do is use the Abstract Factory design pattern to implements more detailed sub-classes from these said characters to give them special equipment, items, or actions. Similar to the use of the Strategy design pattern, our game has to be flexible enough to handle these somewhat similar but different in their own way functions and algorithms, as we have multiple classes revolving around the character class. This will make the ability to choose your character and be as unique, quite easy and simple for the user. 
 
 ###### OMT Class Diagram
-![OMT Diagram](https://user-images.githubusercontent.com/81598801/118554612-87c61000-b716-11eb-8f6f-6765d02df622.jpeg)
+![OMT Diagram (1)](https://user-images.githubusercontent.com/81598801/119738920-4fb97e00-be36-11eb-80ec-21d8ea6c8c14.jpeg)
 
 ###### OMT Description
 The OMT diagram depicts the strategy pattern of our project through the character class being able to access a bunch or different attacks for the different characters through the attack classes. The user gets to decide between the four character choices, and once they do the program will use that character type throughout their adventure. Throughout the adventure, the player will be presented with different options at runtime: attack, heal via potion, or concede. These options are presented in different functions to be implemented in the battle options class.

@@ -13,12 +13,38 @@ void AttackWarrior::attack(Character* character_, Character* enemy){
 
 }
 void AttackMage::attack(Character* character_, Character* enemy){
-    enemy->setHealth(enemy->getHealth() - character_->getDamage());
+    int x = character_->getHolder();
+    if (character_->getBurning() != 0){
+        enemy->setHealth(enemy->getHealth() - character_->getBurning());
+        cout << "Dealt " << character_->getBurning() << " points of burn damage" << endl;
+    }
+    if (x == 0){
+        //Fireball
+        enemy->setHealth(enemy->getHealth() - character_->getDamage());
+        character_->burning();
+    }
+    else if (x == 1){
+        //IncreasePower
+        character_->increasePower();
+    }
+    else if (x == 2){
+        //Lightbolt
+        enemy->setHealth(enemy->getHealth() - character_->lightBolt());
+    }
+    else{
+        enemy->setHealth(enemy->getHealth() - character_->getDamage());
+    }
     cout << "Blast!" << endl;
+
 }
 
 void AttackAssassin::attack(Character* character_, Character* enemy){
+    if (character_->getBurning() != 0){
+        enemy->setHealth(enemy->getHealth() - character_->getBurning());
+        cout << "Dealt " << character_->getBurning() << " points of poison damage" << endl;
+    }
     enemy->setHealth(enemy->getHealth() - character_->getDamage());
+    character_->burning();
     cout << "Stab!" << endl;
 }
 

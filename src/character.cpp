@@ -48,6 +48,10 @@ void Character::setSpeed(int speed_){
     this->speed = speed_;
 }
 
+void Character::setDamage(int damage_){
+    this->damage = damage_;
+}
+
 bool Character::isAlive() const{
 
     return false;
@@ -90,3 +94,13 @@ bool Character::isArrow(){
 void Character::setHolder(int num){
 
 }
+
+//Mage
+void Character::increasePower(){
+
+}
+
+int Character::lightBolt(){
+    return 0;
+}
+
