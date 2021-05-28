@@ -1,7 +1,7 @@
 #include "character.hpp"
 
 Character::~Character(){
-
+    delete attack_;
 }
 
 void Character::setAttack(AttackStrat* attack){
@@ -104,3 +104,7 @@ int Character::lightBolt(){
     return 0;
 }
 
+//Enemies
+bool Character::dodgeAttack(){
+    return true;
+}

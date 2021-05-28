@@ -91,6 +91,7 @@ public:
         this->speed = speed_;
         startingHealth = health_;
     }
+    ~Warrior(){ delete attack_;}
     bool healthCheck(){
         if(health < startingHealth/2){
                 return true;
@@ -198,7 +199,7 @@ public:
     int getBurning(){
         return burn;
     }
-  
+};  
   //ENEMIES
 class Dragon : public Character{
     public:
@@ -226,6 +227,7 @@ class Ogre : public Character{
                 	damage = damage_;
                 	speed = speed_;
         	}
+	~Ogre(){delete attack_;}
 };
 
 class Slime : public Character{
