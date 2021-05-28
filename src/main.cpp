@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <stdlib.h>
 
 #include "character.hpp"
 #include "attack.hpp"
@@ -24,6 +25,27 @@ int main(){
     Archer* arch2 = new Archer(1, 1, 1, 1);
 
     arch1->attackHit(arch2);
-	return 0;
+	
+
+	//ENEMIES
+    Dragon* drag = new Dragon(1, 1, 1, 1);
+    if(drag->dodgeAttack() == true){
+	cout << "dodged" << endl;
+    }
+    else if(drag->dodgeAttack() == false){
+	cout << "hit" << endl;
+    }
+
+    Ogre* og = new Ogre(1, 1, 1, 1);
+
+    Slime* slim = new Slime(1, 1, 1, 1);
+
+    Skeleton* skel = new Skeleton(1, 1, 1, 1);
+
+    Spider* spid = new Spider(1, 1, 1, 1);
+
+    Zombies* zomb = new Zombies(1, 1, 1, 1);
+
+    return 0;
 }
 

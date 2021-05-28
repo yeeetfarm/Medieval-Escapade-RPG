@@ -72,8 +72,11 @@ public:
 
     //Mage
     virtual void increasePower();
-
+   
     virtual int lightBolt();
+  
+  //Dragon
+    virtual bool dodgeAttack();
 };
 
 class Warrior : public Character{
@@ -140,7 +143,6 @@ public:
         return burn;
     }
 };
-
 class Assassin : public Character{
 private:
     int burn;
@@ -196,5 +198,100 @@ public:
     int getBurning(){
         return burn;
     }
+  
+  //ENEMIES
+class Dragon : public Character{
+    public:
+        Dragon(int health_, int armor_, int damage_, int speed_){
+		health = health_;
+        	armor = armor_;
+        	damage = damage_;
+        	speed = speed_;
+	}
+
+	bool dodgeAttack(){
+		int percentage = rand() % 100 + 1;
+		if(percentage <= 40){
+			return true;
+		}
+		return false;
+	}
+};
+
+class Ogre : public Character{
+	public:
+		Ogre(int health_, int armor_, int damage_, int speed_){
+                	health = health_;
+                	armor = armor_;
+                	damage = damage_;
+                	speed = speed_;
+        	}
+};
+
+class Slime : public Character{
+	public:
+		Slime(int health_, int armor_, int damage_, int speed_){
+                        health = health_;
+                        armor = armor_;
+                        damage = damage_;
+                        speed = speed_;
+                }
+		void reduceSpeed(Character* char_){
+			int newSpeed = char_->getSpeed() - 5;
+			char_->setSpeed(newSpeed);
+		}
+};
+
+class Skeleton : public Character{
+	private:
+		int surviveFatal;
+	public:
+		Skeleton(int health_, int armor_, int damage_, int speed_){
+                        health = health_;
+                        armor = armor_;
+                        damage = damage_;
+                        speed = speed_;
+			surviveFatal = 1;
+                }
+		void checkFatal(){
+			if(surviveFatal == 1){
+				health = 1;
+				surviveFatal = 0;		
+			}
+		}
+};
+
+class Spider : public Character{\
+	private:
+		int web_; //1 = web function used, 0 = not in use
+	public:
+		Spider(int health_, int armor_, int damage_, int speed_){
+                        health = health_;
+                        armor = armor_;
+                        damage = damage_;
+                        speed = speed_;
+			web_ = 0;
+                }
+		bool webon(Character *char_){
+			web_ = 1;		
+		}
+		bool weboff(Character *char_){
+			web_ = 0;
+		} 	
+};
+
+class Zombies : public Character{
+	public:
+		Zombies(int health_, int armor_, int damage_, int speed_){
+                        health = health_;
+                        armor = armor_;
+                        damage = damage_;
+                        speed = speed_;
+                }
+		void leech(Character *char_){
+			int newHealth = char_->getHealth() - 5;
+			char_->setHealth(newHealth);
+			this->health += 5;
+		}
 };
 #endif //__CHARACTER_HPP__
