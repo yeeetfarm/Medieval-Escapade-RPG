@@ -203,7 +203,6 @@ public:
         return burn;
     }
 };
-  
   //ENEMIES
 class Dragon : public Character{
     public:
