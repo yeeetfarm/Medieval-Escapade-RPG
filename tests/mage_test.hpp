@@ -15,6 +15,8 @@ TEST(MageTest, BasicTest1){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage2->getHealth(), 0);
+    delete mage1;
+    delete mage2;
 }
 
 TEST(MageTest, IsBurning){
@@ -27,6 +29,8 @@ TEST(MageTest, IsBurning){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage1->getBurning(), 1);
+    delete mage1;
+    delete mage2;
 }
 
 TEST(MageTest, IsBurning2){
@@ -40,6 +44,8 @@ TEST(MageTest, IsBurning2){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage2->getHealth(), 79);
+    delete mage1;
+    delete mage2;
 }
 
 TEST(MageTest, IncreasePower){
@@ -53,6 +59,8 @@ TEST(MageTest, IncreasePower){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage2->getHealth(), 100);
+    delete mage1;
+    delete mage2;
 }
 
 TEST(MageTest, IncreasePower2){
@@ -66,6 +74,8 @@ TEST(MageTest, IncreasePower2){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage1->getDamage(), 30);
+    delete mage1;
+    delete mage2;
 }
 
 TEST(MageTest, LightBolt){
@@ -81,6 +91,8 @@ TEST(MageTest, LightBolt){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage2->getHealth(), 40);
+    delete mage1;
+    delete mage2;
 }
 
 TEST(MageTest, LightBolt2){
@@ -94,6 +106,8 @@ TEST(MageTest, LightBolt2){
     mage1->attackHit(mage2);
 
     EXPECT_DOUBLE_EQ(mage2->getHealth(), 90);
+    delete mage1;
+    delete mage2;
 }
 
 
