@@ -54,8 +54,10 @@ void Character::setDamage(int damage_){
 }
 
 bool Character::isAlive() const{
-
-    return false;
+    if (this->health <= 0){
+	return false;
+    }
+    return true;
 }
 
 void Character::seeInventory(){

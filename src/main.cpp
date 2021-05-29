@@ -32,7 +32,7 @@ int main(){
 
     delete arch1;
     delete arch2;
-/*
+
     //ENEMIES
     Dragon* drag = new Dragon(1, 1, 1, 1);
     if(drag->dodgeAttack() == true){
@@ -58,7 +58,7 @@ int main(){
 
     Zombies* zomb = new Zombies(1, 1, 1, 1);
     delete zomb;
-*/
+
     return 0;
 }
 

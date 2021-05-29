@@ -10,12 +10,14 @@ class Character;
 
 class AttackStrat{
 public:
+    virtual ~AttackStrat() = default;
     virtual void attack(Character* character_, Character* enemy) = 0;
 };
 
 class AttackWarrior : public AttackStrat{
 public:
     virtual void attack(Character* character_, Character* enemy);
+    ~AttackWarrior();
 };
 
 class AttackMage : public AttackStrat{
