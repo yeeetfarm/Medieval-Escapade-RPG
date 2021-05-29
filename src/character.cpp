@@ -1,4 +1,5 @@
 #include "character.hpp"
+#include "attack.hpp"
 
 Character::~Character(){
     delete attack_;
