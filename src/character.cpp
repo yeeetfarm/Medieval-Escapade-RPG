@@ -109,8 +109,3 @@ void Character::increasePower(){
 int Character::lightBolt(){
     return 0;
 }
-
-//Enemies
-bool Character::dodgeAttack(){
-    return true;
-}
