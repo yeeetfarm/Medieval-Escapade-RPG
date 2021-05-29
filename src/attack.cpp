@@ -12,6 +12,9 @@ void AttackWarrior::attack(Character* character_, Character* enemy){
 
 
 }
+AttackWarrior::~AttackWarrior(){
+
+}
 void AttackMage::attack(Character* character_, Character* enemy){
     int x = character_->getHolder();
     if (character_->getBurning() != 0){
@@ -57,21 +60,21 @@ void AttackArcher::attack(Character* character_, Character* enemy){
     }
 
     if (x == 0){
-        //Multishot
+        cout << "Multishot" << endl;
         enemy->setHealth(enemy->getHealth() - 3*character_->getDamage());
     }
     else if (x == 1){
-        //Slowshot
+        cout << "Slowshot" << endl;
         enemy->setHealth(enemy->getHealth() - character_->getDamage());
         enemy->setSpeed(enemy->getSpeed() - 10);
     }
     else if (x == 2){
-        //Poisonshot
+        cout << "Poisonshot" << endl;
         enemy->setHealth(enemy->getHealth() - character_->getDamage());
         character_->burning();
     }
     else{
-        //Normalshot
+        cout << "Normalshot" << endl;
         enemy->setHealth(enemy->getHealth() - character_->getDamage());
     }
     character_->useArrow();
