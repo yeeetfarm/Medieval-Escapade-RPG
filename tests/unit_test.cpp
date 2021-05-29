@@ -5,6 +5,7 @@
 
 #include "warrior_test.hpp"
 #include "archer_test.hpp"
+#include "mage_test.hpp"
 
 #include "enemy_test.hpp"
 
