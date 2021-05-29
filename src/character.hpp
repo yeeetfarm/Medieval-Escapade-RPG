@@ -91,7 +91,6 @@ public:
         this->speed = speed_;
         startingHealth = health_;
     }
-    ~Warrior(){}
     bool healthCheck(){
         if(health < startingHealth/2){
                 return true;
@@ -203,6 +202,7 @@ public:
         return burn;
     }
 };
+/*
   //ENEMIES
 class Dragon : public Character{
     public:
@@ -303,4 +303,5 @@ class Zombies : public Character{
 			this->health += 5;
 		}
 };
+*/
 #endif //__CHARACTER_HPP__
