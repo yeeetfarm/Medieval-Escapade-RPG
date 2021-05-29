@@ -15,6 +15,8 @@ TEST(ArcherTest, BasicTest1){
     arch1->attackHit(arch2);
 
     EXPECT_DOUBLE_EQ(arch2->getHealth(), 0);
+    delete arch1;
+    delete arch2;
 }
 
 TEST(ArcherTest, GetHolder){
@@ -23,6 +25,7 @@ TEST(ArcherTest, GetHolder){
     arch1->setHolder(1);
 
     EXPECT_DOUBLE_EQ(arch1->getHolder(), 1);
+    delete arch1;
 }
 
 TEST(ArcherTest, GetHolder2){
@@ -36,6 +39,7 @@ TEST(ArcherTest, GetHolder2){
     arch1->useArrow();
 
     ASSERT_EQ(arch1->isArrow(), false);
+    delete arch1;
 }
 
 TEST(ArcherTest, IsPoison){
@@ -49,6 +53,8 @@ TEST(ArcherTest, IsPoison){
     arch1->attackHit(arch2);
 
     EXPECT_DOUBLE_EQ(arch1->getBurning(), 2);
+    delete arch1;
+    delete arch2;
 }
 
 TEST(ArcherTest, IsPoison2){
@@ -64,6 +70,8 @@ TEST(ArcherTest, IsPoison2){
     arch1->attackHit(arch2);
 
     EXPECT_DOUBLE_EQ(arch1->getBurning(), 4);
+    delete arch1;
+    delete arch2;
 }
 
 TEST(ArcherTest, IsPoison3){
@@ -79,6 +87,8 @@ TEST(ArcherTest, IsPoison3){
     arch1->attackHit(arch2);
 
     EXPECT_DOUBLE_EQ(arch2->getHealth(), 78);
+    delete arch1;
+    delete arch2;
 }
 
 TEST(ArcherTest, MultiShot){
@@ -92,6 +102,8 @@ TEST(ArcherTest, MultiShot){
     arch1->attackHit(arch2);
 
     EXPECT_DOUBLE_EQ(arch2->getHealth(), 70);
+    delete arch1;
+    delete arch2;
 }
 
 TEST(ArcherTest, SlowShot){
@@ -105,6 +117,8 @@ TEST(ArcherTest, SlowShot){
     arch1->attackHit(arch2);
 
     EXPECT_DOUBLE_EQ(arch2->getSpeed(), 1);
+    delete arch1;
+    delete arch2;
 }
 
 

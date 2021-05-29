@@ -40,6 +40,9 @@ void AttackMage::attack(Character* character_, Character* enemy){
     cout << "Blast!" << endl;
 
 }
+AttackMage::~AttackMage(){
+
+}
 
 void AttackAssassin::attack(Character* character_, Character* enemy){
     if (character_->getBurning() != 0){
@@ -50,6 +53,10 @@ void AttackAssassin::attack(Character* character_, Character* enemy){
     character_->burning();
     cout << "Stab!" << endl;
 }
+AttackAssassin::~AttackAssassin(){
+
+}
+
 
 void AttackArcher::attack(Character* character_, Character* enemy){
     int x = character_->getHolder();
@@ -80,9 +87,16 @@ void AttackArcher::attack(Character* character_, Character* enemy){
     character_->useArrow();
     cout << "Twang!" << endl;
 }
+AttackArcher::~AttackArcher(){
+
+}
+
 
 void AttackEnemy::attack(Character* character_, Character* enemy){
     enemy->setHealth(enemy->getHealth() - character_->getDamage());
     cout << "Ouch!" << endl;
+}
+AttackEnemy::~AttackEnemy(){
+
 }
 
