@@ -35,11 +35,12 @@ int main(){
 
     //ENEMIES
     Dragon* drag = new Dragon(1, 1, 1, 1);
-    if(drag->dodgeAttack() == true){
-	cout << "dodged" << endl;
+    drag->dodgeAttack();
+    if(drag->getDodge() == 1){
+	cout << "Dodged" << endl;
     }
-    else if(drag->dodgeAttack() == false){
-	cout << "hit" << endl;
+    else{
+	cout  << "Not Dodged" << endl;
     }
 
     delete drag;
