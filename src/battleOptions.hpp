@@ -18,18 +18,18 @@ class battleOptions{
 		}
 	}
 
-	void attackSeq(string type, Character* user, Character* enemy){
+	void attackSeq(string type, Character* player, Character* enemy){
 		if(type == "1"){
-			user->attackHit(enemy);
+			player->attackHit(enemy);
 		}
 		else{
 		cout << "Not implemented yet" << endl;
 		}
 	}
 
-	void healSeq(Character* user){
-		if(user->getPotion() > 0){	
-			user->usePotion();
+	void healSeq(Character* player){
+		if(player->getPotion() > 0){	
+			player->usePotion();
 			cout << endl  <<"You consume a healing potion to regain 30 health!" << endl;
 		}
 		else{
@@ -37,6 +37,9 @@ class battleOptions{
 		}
 	}
 
+	void enemyAttackSeq(string type, Character* player, Character* enemy){
+		enemy->attackHit(player); //work in progress, needs to be adjusted with actual attack function
+	}
 
 };
 
