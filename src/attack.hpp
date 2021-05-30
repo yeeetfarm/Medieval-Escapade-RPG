@@ -10,7 +10,8 @@ class Character;
 
 class AttackStrat{
 public:
-    virtual ~AttackStrat() = default;
+    AttackStrat(){}
+    virtual ~AttackStrat();
     virtual void attack(Character* character_, Character* enemy) = 0;
 };
 
