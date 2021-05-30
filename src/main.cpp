@@ -22,8 +22,10 @@ int main(){
     
     //cout << warr2->getHealth() << endl;
     
+
     //delete warr1;
     //delete warr2;
+
 
     //Archer* arch1 = new Archer(1, 1, 1, 1);
     //AttackArcher* aArcher = new AttackArcher;
@@ -37,6 +39,7 @@ int main(){
     //delete arch2;
 
     //ENEMIES
+
     //Dragon* drag = new Dragon(1, 1, 1, 1);
   //  if(drag->dodgeAttack() == true){
 //	cout << "dodged" << endl;
@@ -144,6 +147,7 @@ while(slim->getHealth() > 0){
 }
 
 cout << endl  << "You have defeated the slime" << endl;
+
 
 
 

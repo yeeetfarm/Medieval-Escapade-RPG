@@ -2,7 +2,6 @@
 #include "attack.hpp"
 
 Character::~Character(){
-    delete attack_;
 }
 
 void Character::setAttack(AttackStrat* attack){
@@ -54,8 +53,10 @@ void Character::setDamage(int damage_){
 }
 
 bool Character::isAlive() const{
-
-    return false;
+    if (this->health <= 0){
+	return false;
+    }
+    return true;
 }
 
 void Character::seeInventory(){
@@ -97,14 +98,6 @@ int Character::getHolder(){
     return 0;
 }
 
-bool Character::isArrow(){
-    return true;
-}
-
-void Character::setHolder(int num){
-
-}
-
 //Mage
 void Character::increasePower(){
 
@@ -112,9 +105,4 @@ void Character::increasePower(){
 
 int Character::lightBolt(){
     return 0;
-}
-
-//Enemies
-bool Character::dodgeAttack(){
-    return true;
 }

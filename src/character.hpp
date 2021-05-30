@@ -21,7 +21,6 @@ protected:
 
 public:
     //Character(int health_, int armor_, int damage_, int speed_):health(health_), armor(armor_), damage(damage_), speed(speed_){}
-    
 
     virtual ~Character();
 
@@ -71,17 +70,10 @@ public:
 
     virtual int getHolder();
 
-    virtual bool isArrow();
-
-    virtual void setHolder(int num);
-
     //Mage
     virtual void increasePower();
    
     virtual int lightBolt();
-  
-  //Dragon
-    virtual bool dodgeAttack();
 };
 
 class Warrior : public Character{
@@ -97,7 +89,8 @@ public:
         startingHealth = health_;
 	this->potion = 2;
     }
-    ~Warrior(){}
+    ~Warrior(){
+    }
     bool healthCheck(){
         if(health < startingHealth/2){
                 return true;
@@ -125,6 +118,11 @@ public:
 	potion = 2;
     }
     ~Archer(){}
+    void resetBow(){
+	for(int i = 0; i < 3; i++){
+		arrows[i] = 5;
+	}
+    }
     int getHolder(){
         return holder;
     }
@@ -165,7 +163,8 @@ public:
         burn = 0;
 	potion = 2;
     }
-    ~Assassin(){}
+    ~Assassin(){
+    }
     void burning(){
         burn += 5;
     }
@@ -191,7 +190,8 @@ public:
         burn = 0;
 	potion = 2;
     }
-    ~Mage(){}
+    ~Mage(){
+    }
     void setHolder(int num){
         holder = num;
     }
@@ -214,21 +214,30 @@ public:
 };
   //ENEMIES
 class Dragon : public Character{
-    public:
-        Dragon(int health_, int armor_, int damage_, int speed_){
-		health = health_;
-        	armor = armor_;
-        	damage = damage_;
-        	speed = speed_;
-	}
-	~Dragon(){}
-	bool dodgeAttack(){
-		int percentage = rand() % 100 + 1;
-		if(percentage <= 40){
-			return true;
+	private:
+		int dodge; //1 = dodge, 0 = not dodged
+	public:
+        	Dragon(int health_, int armor_, int damage_, int speed_){
+			health = health_;
+        		armor = armor_;
+        		damage = damage_;
+        		speed = speed_;
+			dodge = 0;
 		}
-		return false;
-	}
+		~Dragon(){
+        	}
+		void dodgeAttack(){
+			int percentage = rand() % 100 + 1;
+			if(percentage <= 40){
+				dodge = 1;
+			}
+			else{
+				dodge = 0;
+			}
+		}
+		int getDodge(){
+			return dodge;
+		}
 };
 
 class Ogre : public Character{
@@ -239,7 +248,8 @@ class Ogre : public Character{
                 	damage = damage_;
                 	speed = speed_;
         	}
-		~Ogre(){}
+                ~Ogre(){
+        	}
 };
 
 class Slime : public Character{
@@ -249,8 +259,9 @@ class Slime : public Character{
                         armor = armor_;
                         damage = damage_;
                         speed = speed_;
-                }
-		~Slime(){}
+		}
+		~Slime(){
+        	}
 		void reduceSpeed(Character* char_){
 			int newSpeed = char_->getSpeed() - 5;
 			char_->setSpeed(newSpeed);
@@ -268,7 +279,8 @@ class Skeleton : public Character{
                         speed = speed_;
 			surviveFatal = 1;
                 }
-		~Skeleton(){}
+		~Skeleton(){
+        	}
 		void checkFatal(){
 			if(surviveFatal == 1){
 				health = 1;
@@ -288,11 +300,15 @@ class Spider : public Character{
                         speed = speed_;
 			web_ = 0;
                 }
-		~Spider(){}
-		bool webon(Character *char_){
+		~Spider(){
+        	}
+		int getWeb(){
+			return web_;
+		}
+		void webOn(){
 			web_ = 1;		
 		}
-		bool weboff(Character *char_){
+		void webOff(){
 			web_ = 0;
 		} 	
 };
@@ -305,7 +321,8 @@ class Zombies : public Character{
                         damage = damage_;
                         speed = speed_;
                 }
-		~Zombies(){}
+		~Zombies(){
+        	}
 		void leech(Character *char_){
 			int newHealth = char_->getHealth() - 5;
 			char_->setHealth(newHealth);
