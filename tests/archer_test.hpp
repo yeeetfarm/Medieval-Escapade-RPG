@@ -121,6 +121,21 @@ TEST(ArcherTest, SlowShot){
     delete arch2;
 }
 
+TEST(ArcherTest, GetHolder3){
+    Archer* arch1 = new Archer(1, 1, 1, 1);
+
+    arch1->setHolder(1);
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+
+    arch1->resetBow();
+    ASSERT_EQ(arch1->isArrow(), true);
+    delete arch1;
+}
+
 
 
 

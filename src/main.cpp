@@ -20,7 +20,10 @@ int main(){
     cout << warr2->getHealth() << endl;
     
     delete warr1;
+   
     delete warr2;
+    
+    delete aWarrior;
 
     Archer* arch1 = new Archer(1, 1, 1, 1);
     AttackArcher* aArcher = new AttackArcher;

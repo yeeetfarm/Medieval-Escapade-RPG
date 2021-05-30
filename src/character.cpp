@@ -2,7 +2,6 @@
 #include "attack.hpp"
 
 Character::~Character(){
-    delete attack_;
 }
 
 void Character::setAttack(AttackStrat* attack){
@@ -93,14 +92,6 @@ void Character::useArrow(){
 }
 int Character::getHolder(){
     return 0;
-}
-
-bool Character::isArrow(){
-    return true;
-}
-
-void Character::setHolder(int num){
-
 }
 
 //Mage

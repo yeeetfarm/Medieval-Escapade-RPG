@@ -1,4 +1,7 @@
 #include "attack.hpp"
+AttackStrat::~AttackStrat(){
+	
+}
 
 void AttackWarrior::attack(Character* character_, Character* enemy){
     if(character_->healthCheck()){
@@ -13,7 +16,6 @@ void AttackWarrior::attack(Character* character_, Character* enemy){
 
 }
 AttackWarrior::~AttackWarrior(){
-
 }
 void AttackMage::attack(Character* character_, Character* enemy){
     int x = character_->getHolder();
@@ -41,7 +43,7 @@ void AttackMage::attack(Character* character_, Character* enemy){
 
 }
 AttackMage::~AttackMage(){
-
+        
 }
 
 void AttackAssassin::attack(Character* character_, Character* enemy){
@@ -54,7 +56,7 @@ void AttackAssassin::attack(Character* character_, Character* enemy){
     cout << "Stab!" << endl;
 }
 AttackAssassin::~AttackAssassin(){
-
+        
 }
 
 
@@ -88,7 +90,7 @@ void AttackArcher::attack(Character* character_, Character* enemy){
     cout << "Twang!" << endl;
 }
 AttackArcher::~AttackArcher(){
-
+        
 }
 
 
@@ -97,6 +99,6 @@ void AttackEnemy::attack(Character* character_, Character* enemy){
     cout << "Ouch!" << endl;
 }
 AttackEnemy::~AttackEnemy(){
-
+	
 }
 
