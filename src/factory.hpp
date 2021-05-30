@@ -1,3 +1,7 @@
+#ifndef __FACTORY_HPP__
+#define __FACTORY_HPP__
+
+
 #include "character.hpp"
 #include <string>
 #include "attack.hpp"
@@ -8,18 +12,18 @@ class factory{
 
         public:
 
-        Character* createChar(string type, int one, int two, int three, int four){ //creates a character in a factory pattern manner, returns nullptr if invalid input
-                if(type == "warrior"){
-                        return new Warrior(one, two, three, four);
+        Character* createChar(string type){ //creates a character in a factory pattern manner, returns nullptr if invalid input
+                if(type == "1"){
+                        return new Warrior(100, 70, 70, 30);
                 }
-                else if(type == "archer"){
-                        return new Archer(one, two, three, four);
+                else if(type == "2"){
+                        return new Archer(70, 40, 60, 70);
                 }
-                else if(type == "assassin"){
-                        return new Assassin(one, two, three, four);
+                else if(type == "3"){
+                        return new Assassin(50, 50, 50, 100);
                 }
-                else if(type == "mage"){
-                        return new Mage(one, two, three, four);
+                else if(type == "4"){
+                        return new Mage(50, 40, 80, 50);
                 }
 
                 return nullptr; //accounts for invalid input
@@ -27,16 +31,16 @@ class factory{
         }
 
         AttackStrat* createAttack(string type){
-                if(type == "warrior"){
+                if(type == "1"){
                         return new AttackWarrior;
                 }
-                else if(type == "archer"){
+                else if(type == "2"){
                         return new AttackArcher;
                 }
-                else if(type == "assassin"){
+                else if(type == "3"){
                         return new AttackAssassin;
                 }
-                else if(type == "mage"){
+                else if(type == "4"){
                         return new AttackMage;
                 }
 
@@ -47,3 +51,4 @@ class factory{
 
 
 };
+#endif //__FACTORY_HPP__
