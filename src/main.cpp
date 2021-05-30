@@ -18,15 +18,13 @@ int main(){
     warr1->attackHit(warr2);
     
     cout << warr2->getHealth() << endl;
-    cout << "djlfajds" << endl;
+    
     delete warr1;
-    cout << "a" << endl;
+   
     delete warr2;
-    cout << "b" << endl;
+    
     delete aWarrior;
-    cout << "c" << endl;
 
-/*
     Archer* arch1 = new Archer(1, 1, 1, 1);
     AttackArcher* aArcher = new AttackArcher;
     arch1->setAttack(aArcher);
@@ -64,7 +62,7 @@ int main(){
 
     Zombies* zomb = new Zombies(1, 1, 1, 1);
     delete zomb;
-*/
+
     return 0;
 }
 
