@@ -132,9 +132,9 @@ TEST(SkeletonTest, checkFatal){
 	war->attackHit(skel);
 	skel->checkFatal();
 	EXPECT_EQ(skel->getHealth(), 1);
-	//delete aWarrior;
 	delete skel;
 	delete war;
+	delete aWarrior;
 }
 
 TEST(SpiderTest, Health){
