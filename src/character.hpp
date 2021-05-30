@@ -57,6 +57,8 @@ public:
 
     void addPotion();
 
+    int getPotion();
+
     virtual void burning();
 
     virtual int getBurning();

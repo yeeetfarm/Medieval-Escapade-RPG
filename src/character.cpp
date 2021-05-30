@@ -71,6 +71,10 @@ void Character::addPotion(){
 	potion += 1;
 }
 
+int Character::getPotion(){
+	return this->potion;
+}
+
 void Character::burning(){
 
 }
