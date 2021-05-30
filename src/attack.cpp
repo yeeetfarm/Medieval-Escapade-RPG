@@ -1,6 +1,6 @@
 #include "attack.hpp"
 AttackStrat::~AttackStrat(){
-	cout << "Deleting..." << endl;
+	
 }
 
 void AttackWarrior::attack(Character* character_, Character* enemy){
@@ -43,7 +43,7 @@ void AttackMage::attack(Character* character_, Character* enemy){
 
 }
 AttackMage::~AttackMage(){
-        delete this;
+        
 }
 
 void AttackAssassin::attack(Character* character_, Character* enemy){
@@ -56,7 +56,7 @@ void AttackAssassin::attack(Character* character_, Character* enemy){
     cout << "Stab!" << endl;
 }
 AttackAssassin::~AttackAssassin(){
-        delete this;
+        
 }
 
 
@@ -90,7 +90,7 @@ void AttackArcher::attack(Character* character_, Character* enemy){
     cout << "Twang!" << endl;
 }
 AttackArcher::~AttackArcher(){
-        delete this;
+        
 }
 
 
@@ -99,6 +99,6 @@ void AttackEnemy::attack(Character* character_, Character* enemy){
     cout << "Ouch!" << endl;
 }
 AttackEnemy::~AttackEnemy(){
-	delete this;
+	
 }
 
