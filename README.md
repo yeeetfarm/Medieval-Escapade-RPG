@@ -1,5 +1,5 @@
 
-# Text Based RPG
+# Medieval Escapade
  Authors: [Stanton Zeng](https://github.com/Lionblaze218), [Jacob Yee](https://github.com/yeetfarm), [Cruz Ramirez](https://github.com/Qrooz)
  
 ## Project Description
