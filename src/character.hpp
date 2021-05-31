@@ -140,7 +140,7 @@ public:
         damage = damage_;
         speed = speed_;
         for(int i = 0; i < 3; i++){
-            arrows.push_back(5);
+            arrows.push_back(10);
         }
         holder = -1;
         burn = 0;
@@ -149,7 +149,7 @@ public:
     ~Archer(){}
     void resetBow(){
 	for(int i = 0; i < 3; i++){
-		arrows[i] = 5;
+		arrows[i] = 10;
 	}
     }
     int getHolder(){
