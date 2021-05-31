@@ -313,7 +313,8 @@ class Skeleton : public Character{
 		void checkFatal(){
 			if(surviveFatal == 1){
 				health = 1;
-				surviveFatal = 0;		
+				surviveFatal = 0;
+				cout << endl << "The skeleton survives fatal damage and reassembles itself with 1 hp " << endl;		
 			}
 		}
 };

@@ -85,7 +85,7 @@ class battleOptions{
 	void healSeq(Character* player){
 		if(player->getPotion() > 0){	
 			player->usePotion();
-			cout << endl  <<"You consume a healing potion to regain 30 health!" << endl;
+			cout << endl  <<"You consume a healing potion to regain 40 health!" << endl;
 		}
 		else{
 		cout << endl  <<"Oh no! You don't have any more potions left to use!" << endl;
@@ -98,21 +98,21 @@ class battleOptions{
 
 	void resetStats(string type, Character* player){
 		if(type == "1"){
-			player->setHealth(100);
+			player->setHealth(120);
 			player->setSpeed(30);
 		}
 		else if(type == "2"){
-			player->setHealth(100);
-                        player->setSpeed(30);
+			player->setHealth(90);
+                        player->setSpeed(70);
 		}
 		else if(type == "3"){
-                        player->setHealth(100);
-                        player->setSpeed(30);
+                        player->setHealth(70);
+                        player->setSpeed(110);
                 }
 		else if(type == "4"){
-                        player->setHealth(100);
-                        player->setDamage(70);
-                        player->setSpeed(30);
+                        player->setHealth(70);
+                        player->setDamage(80);
+                        player->setSpeed(50);
                 }
 
 	}
