@@ -65,7 +65,7 @@ void Character::seeInventory(){
 
 void Character::usePotion(){
 	potion -= 1;
-	this->health += 30;
+	this->health += 40;
 }
 
 void Character::addPotion(){
