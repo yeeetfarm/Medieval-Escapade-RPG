@@ -70,10 +70,39 @@ public:
 
     virtual int getHolder();
 
+    virtual void setHolder(int num);
+
     //Mage
     virtual void increasePower();
    
     virtual int lightBolt();
+
+    //ENEMIES
+    //slime
+    virtual void reduceSpeed(Character* char_){}
+
+    //skeleton
+    virtual void checkFatal(){}
+
+    //spider
+    virtual int getWeb(){
+		return 0;
+    }
+
+    virtual void webOn(){}
+
+    virtual void webOff(){}
+
+    //zombie
+    virtual void leech(Character* char_){}
+
+    //dragon
+    virtual void dodgeAttack(){}
+
+    virtual int getDodge(){
+    return 0;
+    }
+ 
 };
 
 class Warrior : public Character{
@@ -263,7 +292,7 @@ class Slime : public Character{
 		~Slime(){
         	}
 		void reduceSpeed(Character* char_){
-			int newSpeed = char_->getSpeed() - 5;
+			int newSpeed = char_->getSpeed() - 20;
 			char_->setSpeed(newSpeed);
 		}
 };

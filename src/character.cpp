@@ -98,6 +98,10 @@ int Character::getHolder(){
     return 0;
 }
 
+void Character::setHolder(int num){
+
+}
+
 //Mage
 void Character::increasePower(){
 

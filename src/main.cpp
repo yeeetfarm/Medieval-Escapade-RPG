@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
+#include <time.h>
 
 #include "character.hpp"
 #include "attack.hpp"
 #include "factory.hpp"
 #include "battleOptions.hpp"
-#include <stdlib.h> 
+
 
 using namespace std;
 
@@ -72,6 +73,9 @@ battleOptions battle; //battle options object to have access to all the battle o
 string userChoice = ""; //keeps track of the choice user makes in battle
 string giveUp = "bruh"; //indicates if the user has decided to give up
 bool skipEnemyDamage = false; //indicates if the user should skip taking damage from enemy, used when player should not use their turn.
+srand(time(0)); //rand value to be used for enemy abilites
+
+
 
 bool validType = false;
 cout << "Welcome to PLACEHOLDER! Please enter a name for your character: ";
@@ -98,21 +102,49 @@ while(validType == false){
        
 	player1->setAttack(aPlayer);
 
-	Character* slim = new Slime(1, 1, 1, 1);	
+	Character* slim = new Slime(150, 40, 20, 40);	
 	AttackStrat* slimy = new AttackEnemy; 
 
+	slim->setAttack(slimy);
+
 //start of first battle against slime
+
+cout << endl << "In starting your adventure you stumble across a lone slime blocking you path on the road, how should you proceed?" << endl;
+
 while(slim->getHealth() > 0){
 	
 
-	cout << endl << userName << "'s Current health : " << player1->getHealth() << endl;
+	if((skipEnemyDamage == false) && (slim->getHealth() > 0) && (slim->getSpeed() > player1->getSpeed())){ //enemy attack or ability if it is faster
+                if((rand() % 2) == 0){  
+                        cout << endl  << "The slime jumps and bounces off of you!" << endl;
+			battle.enemyAttackSeq(type, player1, slim);
+                }
+                else{
+                        slim->reduceSpeed(player1);
+                        cout << endl << "The slime covers you in goo, making it tougher to move " << endl;
+                }
+
+        }
+        if((slim->getSpeed() > player1->getSpeed())){
+                skipEnemyDamage = false;
+        }
+
+
+	cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
+	cout << endl << "Slime's current health : " << slim->getHealth() << endl;
+
 	battle.printOptions(type);	
 
-	cin >> userChoice;	
+	cin >> userChoice;
+
+	system("clear");
 	if(userChoice == "1"){ //attack option
 		battle.attackSeq(type, player1, slim);		
 	}
 	else if (userChoice == "2"){ //heal option
+		if(player1->getPotion() <= 0){
+			skipEnemyDamage = true;
+		}
 		battle.healSeq(player1);	
 	}
 	else if (userChoice == "3"){ //give up option
@@ -122,10 +154,11 @@ while(slim->getHealth() > 0){
 		cin >> giveUp;
 	
 		if(giveUp == "1"){
-		 cout << endl << "opt 1" << endl;	
+		 cout << endl << "And so you give up and return home to fight another day, better luck next time!" << endl;
+		return 0;	
 		}
 		else if(giveUp == "2"){
-			cout << endl << "opt 2" << endl;
+			
 			skipEnemyDamage = true;		
 		}
 		else if(giveUp != "1" && giveUp != "2"){
@@ -134,28 +167,44 @@ while(slim->getHealth() > 0){
 	}
 	else{
 		cout << endl  <<"Invalid option, please try again" << endl;
+		skipEnemyDamage = true;
 	}
 	
-	if(skipEnemyDamage == false){
-		cout << endl << "take Damage" << endl;
-		//battle.enemyAttackSeq(type, player1, slim);
-	}
+	if((skipEnemyDamage == false) && (slim->getHealth() > 0) && (slim->getSpeed() <= player1->getSpeed())){ //enemy attack if it is slower, or use its ability
 	
-	skipEnemyDamage = false;
+		if((rand() % 2) == 0){	
+			cout << endl  << "The slime jumps and bounces off of you!" << endl;
+			battle.enemyAttackSeq(type, player1, slim);
+		}
+		else{
+			slim->reduceSpeed(player1);
+			cout << endl << "The slime covers you in goo, making it tougher to move " << endl; 
+		}
 
-	//system("clear");
+	}
+	
+
+	if(player1->getHealth() <= 0){ //check if player has died
+		cout << endl << "Gamer over, You died!" << endl;
+		return 0;
+	}	
+	if((slim->getSpeed() < player1->getSpeed())){
+		skipEnemyDamage = false;
+	}
+
 }
 
-cout << endl  << "You have defeated the slime" << endl;
+cout << endl  << "You have defeated the slime, and it dropped a potion" << endl;
 
 
+	battle.resetStats(type, player1); //reset characters stats
+	player1->addPotion();
+	
+delete slim;
+delete slimy;
 
-
-
-
-
-
-
+delete player1;
+delete aPlayer; 
 
     return 0;
 }
