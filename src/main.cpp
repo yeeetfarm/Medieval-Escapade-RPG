@@ -418,8 +418,8 @@ cout << endl << "You have vanquished the Giant spider, and for your efforts you 
                 player1->addPotion();
 		player1->addPotion();
 
-                delete skele;
-                delete skull;
+                delete spider;
+                delete aSpider;
 
 //start of fourth fight against zombie
 
