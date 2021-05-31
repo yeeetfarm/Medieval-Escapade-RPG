@@ -17,6 +17,7 @@ TEST(WarriorTest, BasicTest1){
     EXPECT_DOUBLE_EQ(warr2->getHealth(), 0);
     delete warr1;
     delete warr2;
+    delete aWarrior;
 }
 
 TEST(WarriorTest, GetHealth){
@@ -31,8 +32,8 @@ TEST(WarriorTest, GetHealth){
     ASSERT_EQ(warr2->healthCheck(), true);
     delete warr1;
     delete warr2;
+    delete aWarrior;
 }
-
 
 TEST(WarriorTest, IsDead){
     Warrior* warr1 = new Warrior(1, 1, 6, 1);
@@ -46,6 +47,7 @@ TEST(WarriorTest, IsDead){
     ASSERT_EQ(warr2->isAlive(), false);
     delete warr1;
     delete warr2;
+    delete aWarrior;
 }
 
 TEST(WarriorTest, GetSpeed){
@@ -55,6 +57,7 @@ TEST(WarriorTest, GetSpeed){
 
     EXPECT_DOUBLE_EQ(warr1->getSpeed(), 11);
     delete warr1;
+    delete aWarrior;
 }
 
 TEST(WarriorTest, GetArmor){
@@ -64,6 +67,7 @@ TEST(WarriorTest, GetArmor){
 
     EXPECT_DOUBLE_EQ(warr1->getArmor(), 3);
     delete warr1;
+    delete aWarrior;
 }
 
 

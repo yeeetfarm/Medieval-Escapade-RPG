@@ -17,6 +17,7 @@ TEST(ArcherTest, BasicTest1){
     EXPECT_DOUBLE_EQ(arch2->getHealth(), 0);
     delete arch1;
     delete arch2;
+    delete aArcher;
 }
 
 TEST(ArcherTest, GetHolder){
@@ -55,6 +56,7 @@ TEST(ArcherTest, IsPoison){
     EXPECT_DOUBLE_EQ(arch1->getBurning(), 2);
     delete arch1;
     delete arch2;
+    delete aArcher;
 }
 
 TEST(ArcherTest, IsPoison2){
@@ -72,7 +74,9 @@ TEST(ArcherTest, IsPoison2){
     EXPECT_DOUBLE_EQ(arch1->getBurning(), 4);
     delete arch1;
     delete arch2;
+    delete aArcher;
 }
+
 
 TEST(ArcherTest, IsPoison3){
     Archer* arch1 = new Archer(1, 1, 10, 1);
@@ -89,6 +93,7 @@ TEST(ArcherTest, IsPoison3){
     EXPECT_DOUBLE_EQ(arch2->getHealth(), 78);
     delete arch1;
     delete arch2;
+    delete aArcher;
 }
 
 TEST(ArcherTest, MultiShot){
@@ -104,6 +109,7 @@ TEST(ArcherTest, MultiShot){
     EXPECT_DOUBLE_EQ(arch2->getHealth(), 70);
     delete arch1;
     delete arch2;
+    delete aArcher;
 }
 
 TEST(ArcherTest, SlowShot){
@@ -119,6 +125,7 @@ TEST(ArcherTest, SlowShot){
     EXPECT_DOUBLE_EQ(arch2->getSpeed(), 1);
     delete arch1;
     delete arch2;
+    delete aArcher;
 }
 
 TEST(ArcherTest, GetHolder3){

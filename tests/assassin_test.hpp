@@ -16,7 +16,8 @@ TEST(AssassinTest, BasicTest1){
 
     EXPECT_DOUBLE_EQ(assa2->getHealth(), 0);
     delete assa1;
-    delete assa2;
+    delete assa2;  
+    delete aAssa;
 }
 
 TEST(AssassinTest, Bleeding){
@@ -32,6 +33,7 @@ TEST(AssassinTest, Bleeding){
     EXPECT_DOUBLE_EQ(assa2->getHealth(), 75);
     delete assa1;
     delete assa2;
+    delete aAssa;
 }
 
 TEST(AssassinTest, Bleeding2){
@@ -46,9 +48,8 @@ TEST(AssassinTest, Bleeding2){
     EXPECT_DOUBLE_EQ(assa1->getBurning(), 5);
     delete assa1;
     delete assa2;
+    delete aAssa;
 }
-
-
 
 
 #endif
