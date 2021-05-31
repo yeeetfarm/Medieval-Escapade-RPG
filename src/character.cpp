@@ -2,7 +2,6 @@
 #include "attack.hpp"
 
 Character::~Character(){
-    delete attack_;
 }
 
 void Character::setAttack(AttackStrat* attack){

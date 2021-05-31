@@ -21,6 +21,7 @@ int main(){
     
     delete warr1;
     delete warr2;
+    delete aWarrior;
 
     Archer* arch1 = new Archer(1, 1, 1, 1);
     AttackArcher* aArcher = new AttackArcher;
@@ -32,6 +33,7 @@ int main(){
 
     delete arch1;
     delete arch2;
+    delete aArcher;
 
     //ENEMIES
     Dragon* drag = new Dragon(1, 1, 1, 1);
