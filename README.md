@@ -32,7 +32,7 @@ The OMT diagram depicts the strategy pattern of our project through the characte
 ![Factory OMT (1)](https://user-images.githubusercontent.com/74085680/120268324-71fa3400-c25a-11eb-9bef-db84c8fc5f76.jpeg)
 
 ###### Factory OMT Description
-Using the factory pattern, the client can create an object of class factory in order to use the factory object's function called Character* createChar() in order to create a character. The function works by taking in a string representation of the numbers one through four (such as "1","2","3" or "4") and using the number to decide which character the factory should create, which could be from the warrior, archer, assassin, or mage classes which are all subclasses of the base class Character. In this factory pattern the factory class is the factory and the characters such as warrior, archer, assassin, and mage are all concrete products of the pattern.
+Using the factory pattern, the client can create an object of class factory in order to use the factory object's function called Character* createChar() to create a character. The function works by taking in a string representation of the numbers one through four (such as "1","2","3" or "4") and using the number to decide which character the factory should create, which could be from the warrior, archer, assassin, or mage classes which are all subclasses of the base class Character. In this factory pattern the factory class is the factory and the characters such as warrior, archer, assassin, and mage are all concrete products of the pattern.
 
 ###### Testing
 We tested out our code by creating a multitude of unit tests to match all of the functions that we made. By creating certain scenarios in our testing , we can see if our 
