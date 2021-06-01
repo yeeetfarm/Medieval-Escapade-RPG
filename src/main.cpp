@@ -135,7 +135,7 @@ while(slim->getHealth() > 0){
 
 
 	cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
-	cout << endl << "Slime's current health : " << slim->getHealth() << endl;
+	cout << endl << "Slime's current health : " << slim->getHealth() << endl << endl;
 
 	battle.printOptions(type);	
 
@@ -236,7 +236,7 @@ while(skele->getHealth() > 0){
 
 
         cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
-        cout << endl << "Skeleton's current health : " << skele->getHealth() << endl;
+        cout << endl << "Skeleton's current health : " << skele->getHealth() << endl << endl;
 
         battle.printOptions(type);
 
@@ -339,7 +339,7 @@ while(spider->getHealth() > 0){
 
 
         cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
-        cout << endl << "Giant Spider's current health : " << spider->getHealth() << endl;
+        cout << endl << "Giant Spider's current health : " << spider->getHealth() << endl << endl;
 
         battle.printOptions(type);
 
@@ -452,7 +452,7 @@ while(zombie->getHealth() > 0){
 
 
         cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
-        cout << endl << "Zombie's current health : " << zombie->getHealth() << endl;
+        cout << endl << "Zombie's current health : " << zombie->getHealth() << endl << endl;
 
         battle.printOptions(type);
 
@@ -548,7 +548,7 @@ while(ogre->getHealth() > 0){
 
 
         cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
-        cout << endl << "Ogre's current health : " << ogre->getHealth() << endl;
+        cout << endl << "Ogre's current health : " << ogre->getHealth() << endl << endl;
 
         battle.printOptions(type);
 
@@ -645,7 +645,7 @@ while(dragon->getHealth() > 0){
 
 
         cout << endl << userName << "'s current health : " << player1->getHealth() << endl;
-        cout << endl << "Dragon's current health : " << dragon->getHealth() << endl;
+        cout << endl << "Dragon's current health : " << dragon->getHealth() << endl << endl;
 
         battle.printOptions(type);
 

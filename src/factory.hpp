@@ -23,7 +23,7 @@ class factory{
                         return new Assassin(70, 50, 50, 110);
                 }
                 else if(type == "4"){
-                        return new Mage(70, 40, 80, 50);
+                        return new Mage(70, 40, 80, 55);
                 }
 
                 return nullptr; //accounts for invalid input
