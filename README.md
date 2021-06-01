@@ -36,7 +36,7 @@ To install, use the command "cmake3 ." then "make" and "./main" as pictured belo
 
 ![installation](https://user-images.githubusercontent.com/81598801/120249779-d6a09900-c230-11eb-991d-3f26a518e673.png)
 
-The user will then be prompted to enter a character name. For setup, the user will be given options 1-4 to choose the character they wish to play. Inputting 1 will choose the Warrior, 2 for Archer, 3 for Assassin, and 4 for Mage. The Warrior is high health and damage, but slower character; the Archer has different arrows with different abilities; the Assassin is able to deal poisonous damage that takes the enemy's health even after the turn; the Mage has different spells for attacks. In each turn the user will have 3 options: 1 is to attack with melee weapon; 2 is to heal with a potion that heals 40 HP per potion; 3 is to give up. Which character attacks first is dependent upon who has a greater speed.
+The user will then be prompted to enter a character name. For setup, the user will be given options 1-4 to choose the character they wish to play. Inputting 1 will choose the Warrior, 2 for Archer, 3 for Assassin, and 4 for Mage. The Warrior is high health and damage, but a slower character; the Archer has different arrows with different abilities; the Assassin is able to deal poisonous damage that takes the enemy's health even after the turn; the Mage has different spells for attacks. In each turn the user will have 3 options: 1 is to attack with melee weapon; 2 is to heal with a potion that heals 40 HP per potion; 3 is to give up. Which character attacks first is dependent upon who has a greater speed.
 
 ![setup](https://user-images.githubusercontent.com/81598801/120250212-2c297580-c232-11eb-8af2-85bc1b997b3d.png)
 
