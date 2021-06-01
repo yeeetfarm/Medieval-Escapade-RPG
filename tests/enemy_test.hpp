@@ -95,7 +95,7 @@ TEST(SlimeTest, reduceSpeed){
 	Slime* slim = new Slime(9, 10, 11, 12);
 	Warrior* war = new Warrior(30, 30, 30, 30);
 	slim->reduceSpeed(war);
-	EXPECT_EQ(war->getSpeed(), 25);
+	EXPECT_EQ(war->getSpeed(), 10);
 	delete slim;
 	delete war;
 }

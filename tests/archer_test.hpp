@@ -38,6 +38,11 @@ TEST(ArcherTest, GetHolder2){
     arch1->useArrow();
     arch1->useArrow();
     arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
 
     ASSERT_EQ(arch1->isArrow(), false);
     delete arch1;
@@ -137,8 +142,13 @@ TEST(ArcherTest, GetHolder3){
     arch1->useArrow();
     arch1->useArrow();
     arch1->useArrow();
-
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
+    arch1->useArrow();
     arch1->resetBow();
+
     ASSERT_EQ(arch1->isArrow(), true);
     delete arch1;
 }

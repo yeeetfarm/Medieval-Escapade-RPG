@@ -25,16 +25,16 @@ void AttackMage::attack(Character* character_, Character* enemy){
         cout << "Dealt " << character_->getBurning() << " points of burn damage" << endl;
     }
     if (x == 0){
-        //Fireball
+        cout << "Fireball!" << endl;
         enemy->setHealth(enemy->getHealth() - character_->getDamage());
         character_->burning();
     }
     else if (x == 1){
-        //IncreasePower
+        cout << "Increasing Power!" << endl;
         character_->increasePower();
     }
     else if (x == 2){
-        //Lightbolt
+        cout << "Lightning Bolt!" << endl;
         enemy->setHealth(enemy->getHealth() - character_->lightBolt());
     }
     else{
@@ -54,7 +54,7 @@ void AttackAssassin::attack(Character* character_, Character* enemy){
     }
     enemy->setHealth(enemy->getHealth() - character_->getDamage());
     character_->burning();
-    cout << "Twang! You dealt " << y - enemy->getHealth() << " damage" << endl;
+    cout << "Stab! You dealt " << y - enemy->getHealth() << " damage" << endl;
 }
 AttackAssassin::~AttackAssassin(){
         
