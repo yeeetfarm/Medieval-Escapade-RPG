@@ -104,6 +104,7 @@ class battleOptions{
 		else if(type == "2"){
 			player->setHealth(90);
                         player->setSpeed(70);
+			player->resetBurning();
 		}
 		else if(type == "3"){
                         player->setHealth(70);
@@ -113,6 +114,8 @@ class battleOptions{
                         player->setHealth(70);
                         player->setDamage(80);
                         player->setSpeed(50);
+			player->resetBurning();
+			player->resetCounter();
                 }
 
 	}

@@ -62,6 +62,10 @@ public:
 
     virtual int getBurning();
 
+    virtual void resetBurning(){
+	
+    }
+
     //Warrior
     virtual bool healthCheck();
 
@@ -76,6 +80,10 @@ public:
     virtual void increasePower();
    
     virtual int lightBolt();
+
+    virtual void resetCounter(){
+
+    }
 
     //ENEMIES
     //slime
@@ -147,6 +155,9 @@ public:
 	potion = 2;
     }
     ~Archer(){}
+    void resetBurning(){
+	this->burn = 0;
+    }
     void resetBow(){
 	for(int i = 0; i < 3; i++){
 		arrows[i] = 10;
@@ -194,6 +205,9 @@ public:
     }
     ~Assassin(){
     }
+    void resetBurning(){
+        this->burn = 0;
+    }
     void burning(){
         burn += 5;
     }
@@ -220,6 +234,12 @@ public:
 	potion = 2;
     }
     ~Mage(){
+    }
+    void resetBurning(){
+        this->burn = 0;
+    }
+    void resetCounter(){
+        this->counter = 0;
     }
     void setHolder(int num){
         holder = num;
