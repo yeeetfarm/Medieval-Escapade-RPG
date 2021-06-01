@@ -39,6 +39,7 @@ The user will then be prompted to enter a character name. For setup, the user wi
 ![setup](https://user-images.githubusercontent.com/81598801/120250212-2c297580-c232-11eb-8af2-85bc1b997b3d.png)
 
 Narration will be output to guide the user through the game and both player and enemy health will be outted at the start of each turn. An example is shown below:
+
 ![runtime](https://user-images.githubusercontent.com/81598801/120250241-4400f980-c232-11eb-9989-f9fd556dda92.png)
 
 
