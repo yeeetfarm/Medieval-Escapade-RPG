@@ -31,6 +31,10 @@ The OMT diagram depicts the strategy pattern of our project through the characte
 ###### Factory OMT Diagram
 ![Factory OMT](https://user-images.githubusercontent.com/74085680/118554841-d1aef600-b716-11eb-8ecc-d24ff03897b8.jpeg)
 
+###### Testing
+We tested out our code by creating a multitude of unit tests to match all of the functions that we made. By creating certain scenarios in our testing , we can see if our 
+functions are acting accordingly or need any readjusting. Beyond that, we rigorously tested our game out by simply playing it. With this, we were able to edge out any redundancies, small bugs, and logic errors. 
+
 ## Installation/Usage Instructions
 To install, use the command "cmake3 ." then "make" and "./main" as pictured below:
 
@@ -43,6 +47,5 @@ The user will then be prompted to enter a character name. For setup, the user wi
 Narration will be output to guide the user through the game and both player and enemy health will be outted at the start of each turn. An example is shown below:
 
 ![runtime](https://user-images.githubusercontent.com/81598801/120250241-4400f980-c232-11eb-9989-f9fd556dda92.png)
-
 
 
