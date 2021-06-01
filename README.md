@@ -33,7 +33,7 @@ The OMT diagram depicts the strategy pattern of our project through the characte
 
 ###### Testing
 We tested out our code by creating a multitude of unit tests to match all of the functions that we made. By creating certain scenarios in our testing , we can see if our 
-functions are acting accordingly or need any readjusting. Beyond that, we rigorously tested our game out by simply playing it. With this, we were able to edge out any redundancies, small bugs, and logic errors. 
+functions are acting accordingly or need any readjusting. An example of this would be how we used the warrior class to fight another dummy warrior class, and tested to make sure the warrior's ability and stats match up to where they need to be. Beyond that, we rigorously tested our game out by simply playing it. With this, we were able to edge out any redundancies, bugs, and logic errors that we previously could not find.  
 
 ## Installation/Usage Instructions
 To install, use the command "cmake3 ." then "make" and "./main" as pictured below:
