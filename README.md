@@ -31,7 +31,7 @@ The OMT diagram depicts the strategy pattern of our project through the characte
 ###### Factory OMT Diagram
 ![Factory OMT](https://user-images.githubusercontent.com/74085680/118554841-d1aef600-b716-11eb-8ecc-d24ff03897b8.jpeg)
 
-##Installation/Usage Instructions
+## Installation/Usage Instructions
 To install, use the command "cmake3 ." then "make" and "./main" as pictured below:
 
 ![installation](https://user-images.githubusercontent.com/81598801/120249779-d6a09900-c230-11eb-991d-3f26a518e673.png)
